@@ -1,4 +1,7 @@
 package com.company;
 
-public class Customer {
+import java.util.ArrayList;
+
+public class Customer extends Person {
+
 }

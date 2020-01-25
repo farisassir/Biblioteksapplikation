@@ -1,4 +1,5 @@
 package com.company;
 
-public class Admin {
+public class Admin extends Person {
+
 }
