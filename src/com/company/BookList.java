@@ -20,7 +20,7 @@ public class BookList {
         books.add(new Book("Silent Spring", " Rachel Carson", "Silent Spring is an environmental science book by Rachel Carson. The book was published on September 27, 1962, documenting the adverse environmental effects caused by the indiscriminate use of pesticides.", true));
         books.add(new Book("In Cold Blood", "Truman Capote", "In Cold Blood is a non-fiction novel by American author Truman Capote, first published in 1966; it details the 1959 murders of four members of the Herbert Clutter family in the small farming community of Holcomb, Kansas.", true));
         books.add(new Book("The Top 100 Crime Novels of All Time", " Crime Writers' Association", "DescriptionThe Top 100 Crime Novels of All Time is a list published in book form in 1990 by the British-based Crime Writers' Association. Five years later, the Mystery Writers of America published a similar list entitled The Top 100 Mystery Novels of All Time. Many titles can be found in both lists", true));
-
+        FileUtility.saveObject("books.ser", books);
         for(Book book: books){
             book.getInfo();
         }
