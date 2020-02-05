@@ -31,8 +31,7 @@ public class BookList implements Serializable {
 
     public BookList() {
 
-        if (Files.exists(Paths.get("books.ser")))
-        {
+        if (Files.exists(Paths.get("books.ser"))) {
             books = (ArrayList<Book>) FileUtility.loadObject("books.ser");
         } else {
             createBoolList();
@@ -40,22 +39,16 @@ public class BookList implements Serializable {
 
     }
 
-   public void showBooks() {
+    public void showBooks() {
         for (Book book : books) {
             book.getInfo();
         }
     }
+
     public void addNewBook(Book book) {
         books.add(book);
         System.out.println("New Book added in the library\n Book Name : " + book.getBookName() + " and its Available " + book.isAvailable());
 
-    }
-
-    public void showAvailableBooks() {
-        for (Book book : books) {
-            if (book.isAvailable())
-                book.getInfo();
-        }
     }
 
     public Book getBook(String bookName) {
@@ -65,11 +58,53 @@ public class BookList implements Serializable {
         }
         System.out.println("We don´t have this book");
         return null;
+    }
+
+    public void showAvailableBooks() {
+        for (Book book : books) {
+            if (book.isAvailable())
+                book.getInfo();
         }
+    }
+
+    public Book isBookAvailable(String bookName) {
+        Book book = getBook(bookName);
+        if (book != null) {
+            if (book.isAvailable()) {
+                return book;
+            }
+        }
+        System.out.println("This Book is not available");
+        return null;
+    }
+
+    public Book findBookWithAuthor(String name) {
+        ArrayList<Book> authors = new ArrayList<>(books);
+        for (Book author : authors) {
+            if (author.getAuthor().contains(name)) {
+                return author;
+            }
+        }
+        System.out.println("We don`nt have this Author");
+        return null;
+    }
+
+    public Book findBookWithBookName(String name) {
+        ArrayList<Book> names = new ArrayList<>(books);
+        for (Book bookName : names) {
+            if (bookName.getBookName().contains(name)) {
+                return bookName;
+            }
+        }
+        System.out.println("No book with this name");
+        return null;
 
     }
 
-
+    public ArrayList<Book> getBooks() {
+        return books;
+    }
+}
 
 
 
