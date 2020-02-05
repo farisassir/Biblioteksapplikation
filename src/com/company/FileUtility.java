@@ -7,10 +7,10 @@ import java.util.List;
 
 public class FileUtility {
 
-    public static void saveObject(String filename, Object o, StandardOpenOption... option) {
+    public static void saveObject(String filename, Object object, StandardOpenOption... option) {
         Path path = Paths.get(filename);
         try (ObjectOutputStream out = new ObjectOutputStream(Files.newOutputStream(path, option))) {
-            out.writeObject(o);
+            out.writeObject(object);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,12 +1,16 @@
 package com.company;
 
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
 
    private String bookName;
    private String author;
    private String description;
    private boolean available;
+
+
 
    public String getBookName() {
       return bookName;
