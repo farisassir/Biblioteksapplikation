@@ -5,15 +5,11 @@ import java.io.Serializable;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+
 
 
 public class BookList implements Serializable {
 
-
-    Comparator<Book> sortAuthors = (book, bookTwo) -> (int) book.getAuthor().compareTo(bookTwo.getAuthor());
-    Comparator<Book> sortBookNames = (book, bookTwo) -> (int) book.getBookName().compareTo(bookTwo.getBookName());
 
     public ArrayList<Book> books = new ArrayList<>();
 
@@ -113,39 +109,8 @@ public class BookList implements Serializable {
     }
 
 
-    public ArrayList<Book> sortWriters(ArrayList<Book> list) {
-        list.sort(sortAuthors);
-        return list;
-    }
 
-    public ArrayList<Book> sortBookTitles(ArrayList<Book> list) {
-        list.sort(sortBookNames);
-        return list;
-    }
 
-    public Book findAuthorByName(String name) {
-        ArrayList<Book> writers = sortWriters(books);
-        for (Book writer : writers) {
-            if (writer.getAuthor().toLowerCase().contains(name.toLowerCase())) {
-                return writer;
-            }
-        }
-        System.out.println("We don't have this author in our list. \n");
-        return null;
-
-    }
-
-    public Book findBookByName(String name) {
-        ArrayList<Book> titles = sortBookTitles(books);
-        for (Book title : titles) {
-            if (title.getBookName().toLowerCase().contains(name.toLowerCase())) {
-                return title;
-            }
-        }
-        System.out.println("We don't this have\n");
-        return null;
-
-    }
 
     public ArrayList<Book> getBooks() {
         return books;
