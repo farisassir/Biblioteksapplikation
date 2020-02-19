@@ -4,9 +4,9 @@ package com.company;
 
 public class Customer extends Person {
 
-    public Customer(String name, String userName, String code) {
+    public Customer(String name, String userName, String password) {
 
-        super(name, userName  ,  code);
+        super(name, userName  ,  password);
     }
 
     @Override

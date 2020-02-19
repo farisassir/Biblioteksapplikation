@@ -6,13 +6,13 @@ public abstract class Person {
 
     private String name;
     private String userName;
-    private String code;
+    private String password;
 
 
-    public Person(String name, String code, String userName) {
+    public Person(String name, String password, String userName) {
         this.name = name;
         this.userName = userName;
-        this.code = code;
+        this.password = password;
 
     }
 
@@ -25,8 +25,8 @@ public abstract class Person {
     }
 
 
-    public String getCode() {
-        return code;
+    public String getPassword() {
+        return password;
     }
 
   public abstract void getInfo();
