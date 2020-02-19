@@ -66,6 +66,14 @@ public class BookList implements Serializable {
                 book.getInfo();
         }
     }
+    void showBorrowedBooks() {
+        System.out.println("Borrowed books: \n");
+        for (Book book : books) {
+            if (!book.isAvailable())
+                book.getInfo();
+        }
+
+    }
 
     public Book isBookAvailable(String bookName) {
         Book book = getBook(bookName);
@@ -100,6 +108,7 @@ public class BookList implements Serializable {
         return null;
 
     }
+
 
     public ArrayList<Book> getBooks() {
         return books;

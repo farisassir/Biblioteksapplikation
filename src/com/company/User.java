@@ -120,6 +120,47 @@ public class User implements Serializable {
         String regex ="^(?=.*\\d).{4}$";
         return Pattern.matches(regex, password);
     }
-
+public void  findCustomerByName() {
+    System.out.println("Enter Name: ");
+    String name = input.nextLine();
+    Person person = getCustomer(name);
+    if (person != null) {
+        person.getInfo();
+    } else {
+        System.out.println("This name is not a customer with us");
     }
+}
+
+    private Person getCustomer(String name) {
+        for (Person customer : users) {
+            if ( customer instanceof Customer)
+                if (name.equalsIgnoreCase(customer.getName())) {
+                    return customer;
+                }
+        }
+        return null;
+    }
+
+    void showCustomerBooks(Customer userName) {
+        if (userName != null) {
+            userName.showBorrowedBooks(userName.getName());
+        } else {
+            System.out.println("Try another name");
+        }
+}
+
+    void showAllCustomers() {
+        System.out.println("Customer: \n");
+        for (Person borrower : users) {
+            if (borrower instanceof Customer) {
+                borrower.getInfo();
+            }
+        }
+
+}
+
+    public ArrayList<Person> getUsers() {
+        return users;
+    }
+}
 
