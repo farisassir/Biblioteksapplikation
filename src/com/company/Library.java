@@ -33,6 +33,7 @@ public class Library implements Serializable {
                     break;
                 case "3":
                    // login(user.login());
+                    bookList.findBookWithAuthor("");
                     break;
                 case "4":
                   //  FileUtility.saveObject("users.ser", user.getUsers());

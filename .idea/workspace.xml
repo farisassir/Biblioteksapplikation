@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16fb3388-47ef-4f59-a365-d8a515a4e2a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Biblioteksapplikation/com/company/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Biblioteksapplikation/com/company/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Biblioteksapplikation/com/company/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Biblioteksapplikation/com/company/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,26 +110,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="901" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579851372324" />
-    <state width="1493" height="178" key="GridCell.Tab.0.bottom" timestamp="1580110103221">
+    <state width="1493" height="178" key="GridCell.Tab.0.bottom" timestamp="1580974826976">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="178" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580110103221" />
-    <state width="1493" height="178" key="GridCell.Tab.0.center" timestamp="1580110103220">
+    <state width="1493" height="178" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580974826976" />
+    <state width="1493" height="178" key="GridCell.Tab.0.center" timestamp="1580974826976">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="178" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580110103220" />
-    <state width="1493" height="178" key="GridCell.Tab.0.left" timestamp="1580110103219">
+    <state width="1493" height="178" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580974826976" />
+    <state width="1493" height="178" key="GridCell.Tab.0.left" timestamp="1580974826975">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="178" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580110103219" />
-    <state width="1493" height="178" key="GridCell.Tab.0.right" timestamp="1580110103220">
+    <state width="1493" height="178" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580974826975" />
+    <state width="1493" height="178" key="GridCell.Tab.0.right" timestamp="1580974826976">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="178" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580110103220" />
-    <state x="277" y="54" key="SettingsEditor" timestamp="1579728861340">
+    <state width="1493" height="178" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580974826976" />
+    <state x="277" y="54" key="SettingsEditor" timestamp="1582106926334">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1579728861340" />
+    <state x="277" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582106926334" />
     <state x="209" y="32" key="new project wizard" timestamp="1579851402162">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
