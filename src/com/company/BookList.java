@@ -12,8 +12,19 @@ import java.util.List;
 public class BookList implements Serializable {
 
 
-    private ArrayList<Book> books = new ArrayList<>();
+    Comparator<Book> sortAuthors = (book, bookTwo) -> (int) book.getAuthor().compareTo(bookTwo.getAuthor());
+    Comparator<Book> sortBookNames = (book, bookTwo) -> (int) book.getBookName().compareTo(bookTwo.getBookName());
 
+    public ArrayList<Book> books = new ArrayList<>();
+
+    public BookList() {
+
+        if (Files.exists(Paths.get("books.ser"))) {
+            books = (ArrayList<Book>) FileUtility.loadObject("books.ser");
+        } else {
+            createBoolList();
+        }
+    }
 
     public void createBoolList() {
         books.add(new Book("The Poets Laureate Anthology", "Elizabeth Hun Schmidt", "As a record of poetry, The Poets Laureate Anthology is groundbreaking, charting the course of American poetry over the last seventy-five years, while being, at the same time, a pleasure to read, full of some of the world's best-known poems and many new surprises. Elizabeth Hun Schmidt has gathered and introduced poems by each of the forty-three poets who have been named our nation's poets laureate since the post (originally called Consultant in Poetry to the Library of Congress) was established in 1937. Poets range from Robert Pinsky, William Carlos Williams, and Elizabeth Bishop to Charles Simic, Billy Collins, and Rita Dove. Schmidt's spirited introductions place the poets and their poems in historical and literary context and shine light on the interesting and often uneasy relationship between politics and art. This is an inviting, monumental collection for everyone's library, containing much of the best poetry written in America over the last century.", true));
@@ -29,15 +40,7 @@ public class BookList implements Serializable {
         FileUtility.saveObject("books.ser", books);
     }
 
-    public BookList() {
 
-        if (Files.exists(Paths.get("books.ser"))) {
-            books = (ArrayList<Book>) FileUtility.loadObject("books.ser");
-        } else {
-            createBoolList();
-        }
-
-    }
 
     public void showBooks() {
         for (Book book : books) {
@@ -82,7 +85,7 @@ public class BookList implements Serializable {
                 return book;
             }
         }
-        System.out.println("This Book is not available");
+        System.out.println("This Book is borrowed");
         return null;
     }
 
@@ -104,16 +107,52 @@ public class BookList implements Serializable {
                 return bookName;
             }
         }
-        System.out.println("No book with this name");
+        System.out.println("This book is not available");
         return null;
 
     }
 
 
+    public ArrayList<Book> sortWriters(ArrayList<Book> list) {
+        list.sort(sortAuthors);
+        return list;
+    }
+
+    public ArrayList<Book> sortBookTitles(ArrayList<Book> list) {
+        list.sort(sortBookNames);
+        return list;
+    }
+
+    public Book findAuthorByName(String name) {
+        ArrayList<Book> writers = sortWriters(books);
+        for (Book writer : writers) {
+            if (writer.getAuthor().toLowerCase().contains(name.toLowerCase())) {
+                return writer;
+            }
+        }
+        System.out.println("We don't have this author in our list. \n");
+        return null;
+
+    }
+
+    public Book findBookByName(String name) {
+        ArrayList<Book> titles = sortBookTitles(books);
+        for (Book title : titles) {
+            if (title.getBookName().toLowerCase().contains(name.toLowerCase())) {
+                return title;
+            }
+        }
+        System.out.println("We don't this have \n");
+        return null;
+
+    }
+
     public ArrayList<Book> getBooks() {
         return books;
     }
 }
+
+
 
 
 

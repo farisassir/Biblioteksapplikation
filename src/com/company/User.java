@@ -44,7 +44,7 @@ public class User implements Serializable {
         }
     }
 
-    private void registerAccount(String userPrivilege){
+     void registerAccount(String userPrivilege){
         System.out.println("Your Name");
         String name = input.nextLine();
         userVerification(name, userPrivilege);

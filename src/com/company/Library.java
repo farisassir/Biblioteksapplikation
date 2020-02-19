@@ -20,8 +20,7 @@ public class Library implements Serializable {
             System.out.println("1. Show books");
             System.out.println("2. Register");
             System.out.println("3. Login");
-            System.out.println("4. Save your user Login after registration");
-            System.out.println("5. Exit");
+            System.out.println("4. Exit and Save your user Login after registration");
             String option = input.nextLine();
 
             switch (option) {
@@ -29,20 +28,21 @@ public class Library implements Serializable {
                     bookList.showBooks();
                     break;
                 case "2":
+                    user.createAccount();
                     //user.register();
                     break;
                 case "3":
                    // login(user.login());
-                    bookList.findBookWithAuthor("");
+                  user.logIn();
                     break;
                 case "4":
                   //  FileUtility.saveObject("users.ser", user.getUsers());
-                    break;
-                case "5":
+                    FileUtility.saveObject("users.ser", user.getUsers());
+                    FileUtility.saveObject("books.ser", bookList.books);
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Enter numbers between 1-5");
+                    System.out.println("Enter numbers 1-4");
             }
             }
         }
