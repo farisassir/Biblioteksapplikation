@@ -51,7 +51,7 @@ public class Library implements Serializable {
         if (userName instanceof Customer) {
             customerMenu((Customer) userName);
         } else if (userName instanceof Admin) {
-            adminMenu((Admin) userName);
+            adminMenu();
         }
 
     }
@@ -162,13 +162,13 @@ public class Library implements Serializable {
             System.out.println("Incorrect Customer name.\n");
         }
     }
-    private void adminMenu(Admin userName) {
+    private void adminMenu() {
 
         boolean administrating = true;
 
         while (administrating) {
 
-            System.out.println("--- Administrator menu ---");
+            System.out.println("  Administrator menu  ");
             System.out.println("1. Show all Books");
             System.out.println("2. Show all customers");
             System.out.println("3. Show all loaned book");
