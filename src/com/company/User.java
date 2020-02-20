@@ -69,7 +69,7 @@ public class User implements Serializable {
                             System.out.println("Registration Succeeded!");
                             validateUserName = false;
                             validatePassword = false;
-                        } else if (userPrivilege.equals(("2")){
+                        } else if (userPrivilege.equals("2")) {
                             users.add(new Admin(name, userName, password));
                             System.out.println("Registration Succeeded!");
                             validateUserName = false;
@@ -77,7 +77,7 @@ public class User implements Serializable {
                         }
 
                     } else {
-                        System.out.println("Password is only 4 digits!\n");
+                        System.out.println("Password is only 4 digits & Chart!\n");
                     }
                 }
             }   else   {
@@ -96,7 +96,7 @@ public class User implements Serializable {
                 String password = input.nextLine();
                 if (password != null){
                     if(user.getPassword().equals(password)){
-                        System.out.println(" You Logged in\n");
+                        System.out.println("You Logged in\n");
                         return user;
                     }
                 } else
@@ -143,7 +143,7 @@ public void  findCustomerByName() {
 
     void showCustomerBooks(Customer userName) {
         if (userName != null) {
-            userName.showBorrowedBooks(userName.getName());
+            userName.showLoanedBooks(userName.getName());
         } else {
             System.out.println("Try another name");
         }

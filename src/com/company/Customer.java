@@ -14,6 +14,7 @@ public class Customer extends Person {
 
     @Override
     public void getInfo() {
+        System.out.printf("\nName: %s\nUsername: %s\n\n", getName(), getUserName());
 
     }
 
@@ -52,4 +53,17 @@ public class Customer extends Person {
         return 0;
     }
 
+    public void showLoanedBooks(String name) {
+        System.out.println("Loaned books by " + name + ": ");
+        getLoanedBooks();
+    }
+
+    private void getLoanedBooks() {
+        if (loans.size() > 0) {
+            for (Book loan : loans) {
+                System.out.println("Book Name: " + loan.getBookName());
+            }
+        }
+        System.out.println(" ");
+    }
 }
