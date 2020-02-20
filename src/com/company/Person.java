@@ -9,26 +9,24 @@ public abstract class Person implements Serializable {
     private String userName;
     private String password;
 
+    public Person(String name, String userName, String password) {
+        this.name=name;
+        this.userName=userName;
+        this.password=password;
 
-    public Person(String name, String password, String userName) {
-        this.name = name;
-        this.userName = userName;
-        this.password = password;
-
-    }
-
-    public String getUserName() {
-        return userName;
     }
 
     public String getName() {
         return name;
     }
 
+    public String getUserName() {
+        return userName;
+    }
 
     public String getPassword() {
         return password;
     }
 
-  public abstract void getInfo();
+    public abstract void getInfo();
 }
