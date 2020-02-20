@@ -1,9 +1,10 @@
 package com.company;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Customer extends Person {
+public class Customer extends Person implements Serializable {
 
     ArrayList<Book> loans = new ArrayList<>();
 

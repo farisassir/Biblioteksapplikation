@@ -86,7 +86,7 @@ public class User implements Serializable {
         }
     }
 
-    public Person logIn(){
+    public Person logInUser(){
         System.out.println("Enter your username: ");
         String userLogin = input.nextLine();
         Person user = getUserName(userLogin);
@@ -99,27 +99,22 @@ public class User implements Serializable {
                         System.out.println("You Logged in\n");
                         return user;
                     }
-                } else
+                }
                 System.out.println("Wrong Password");
             }
-        } else
+        }
         System.out.println("Wrong Username");
         return null;
     }
 
-    public Person getUserName(String userName) {
-        for (Person user : users) {
-            if (userName.equals(user.getUserName())) {
-                return user;
-            }
-        }
-        return null;
-    }
+
 
     private boolean validatePassword(String password) {
-        String regex ="^(?=.*\\d).{4}$";
+        String regex ="^(?=.*\\d).{4,8}$";
         return Pattern.matches(regex, password);
     }
+
+
 public void  findCustomerByName() {
     System.out.println("Enter Name: ");
     String name = input.nextLine();
@@ -130,6 +125,14 @@ public void  findCustomerByName() {
         System.out.println("This name is not a customer with us");
     }
 }
+    public Person getUserName(String userName) {
+        for (Person user : users) {
+            if (userName.equals(user.getUserName())) {
+                return user;
+            }
+        }
+        return null;
+    }
 
     private Person getCustomer(String name) {
         for (Person customer : users) {

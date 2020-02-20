@@ -20,7 +20,7 @@ public class Library implements Serializable {
             System.out.println("1. Show books");
             System.out.println("2. Register");
             System.out.println("3. Login");
-            System.out.println("4. Exit and Save your user Login after registration");
+            System.out.println("4. Exit and Save your work");
             String option = input.nextLine();
 
             switch (option) {
@@ -32,8 +32,7 @@ public class Library implements Serializable {
                     //user.register();
                     break;
                 case "3":
-                   login(user.logIn());
-
+                   logIn(user.logInUser());
                     break;
                 case "4":
                   //  FileUtility.saveObject("users.ser", user.getUsers());
@@ -47,7 +46,7 @@ public class Library implements Serializable {
             }
         }
 
-    private void login(Person userName) {
+    private void logIn(Person userName) {
         if (userName instanceof Customer) {
             customerMenu((Customer) userName);
         } else if (userName instanceof Admin) {

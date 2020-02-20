@@ -1,8 +1,9 @@
 package com.company;
 
 import javax.swing.*;
+import java.io.Serializable;
 
-public abstract class Person {
+public abstract class Person implements Serializable {
 
     private String name;
     private String userName;
