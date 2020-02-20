@@ -25,7 +25,7 @@ public class Customer extends Person implements Serializable {
     }
 
     public void returnBookToLibrary(String itemToReturn) {
-        Book bookReturned = getBorrowedBook(itemToReturn);
+        Book bookReturned = getLoanedBook(itemToReturn);
         int indexBookRemove = getIndexOfBook(itemToReturn);
         if (bookReturned != null) {
             loans.remove(indexBookRemove);
@@ -35,7 +35,7 @@ public class Customer extends Person implements Serializable {
         }
     }
 
-    private Book getBorrowedBook(String title) {
+    private Book getLoanedBook(String title) {
         for (Book book : loans) {
             if (book.getBookName().equalsIgnoreCase(title)) {
                 return book;

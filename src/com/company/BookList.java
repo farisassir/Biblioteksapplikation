@@ -44,11 +44,9 @@ public class BookList implements Serializable {
         }
     }
 
-    public void addNewBook(Book book) {
-        books.add(book);
-        System.out.println("New Book added in the library\n Book Name : " + book.getBookName() + " and its Available " + book.isAvailable());
 
-    }
+
+
 
     public Book getBook(String bookName) {
         for (Book book : books) {

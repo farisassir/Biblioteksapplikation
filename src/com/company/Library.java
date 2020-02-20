@@ -61,7 +61,7 @@ public class Library implements Serializable {
 
         while (borrowing) {
 
-            System.out.println("--- Customer menu ---");
+            System.out.println("      Customer menu     ");
             System.out.println("1. Show all books");
             System.out.println("2. loan a book");
             System.out.println("3. Return a book");

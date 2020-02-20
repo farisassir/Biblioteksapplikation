@@ -110,7 +110,7 @@ public class User implements Serializable {
 
 
     private boolean validatePassword(String password) {
-        String regex ="^(?=.*\\d).{4,8}$";
+        String regex ="^(?=.*\\d).{4}$";
         return Pattern.matches(regex, password);
     }
 
@@ -134,7 +134,7 @@ public void  findCustomerByName() {
         return null;
     }
 
-    private Person getCustomer(String name) {
+  public Person getCustomer(String name) {
         for (Person customer : users) {
             if ( customer instanceof Customer)
                 if (name.equalsIgnoreCase(customer.getName())) {
