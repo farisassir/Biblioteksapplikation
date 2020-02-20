@@ -65,7 +65,7 @@ public class BookList implements Serializable {
                 book.getInfo();
         }
     }
-    void showBorrowedBooks() {
+    void showLoanedBooks() {
         System.out.println("Borrowed books: \n");
         for (Book book : books) {
             if (!book.isAvailable())
