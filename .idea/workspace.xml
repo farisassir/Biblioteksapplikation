@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16fb3388-47ef-4f59-a365-d8a515a4e2a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Biblioteksapplikation/com/company/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Biblioteksapplikation/com/company/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Biblioteksapplikation/com/company/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Biblioteksapplikation/com/company/Library.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Biblioteksapplikation/com/company/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Biblioteksapplikation/com/company/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.ser" beforeDir="false" afterPath="$PROJECT_DIR$/users.ser" afterDir="false" />
-    </list>
+    <list default="true" id="16fb3388-47ef-4f59-a365-d8a515a4e2a9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
