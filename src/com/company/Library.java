@@ -94,6 +94,7 @@ public class Library implements Serializable {
                     break;
                 case "6":
                     user.showCustomerBooks(userName);
+                    break;
                 case "7":
                    findAuthor();
                     break;

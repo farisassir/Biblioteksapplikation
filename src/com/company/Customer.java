@@ -35,19 +35,19 @@ public class Customer extends Person implements Serializable {
         }
     }
 
-    private Book getLoanedBook(String title) {
+    private Book getLoanedBook(String bookName) {
         for (Book book : loans) {
-            if (book.getBookName().equalsIgnoreCase(title)) {
+            if (book.getBookName().equalsIgnoreCase(bookName)) {
                 return book;
             }
         }
         return null;
     }
 
-    private int getIndexOfBook(String title) {
-        if (title != null)
+    private int getIndexOfBook(String bookName) {
+        if (bookName != null)
             for (Book book : loans) {
-                if (book.getBookName().equalsIgnoreCase(title)) {
+                if (book.getBookName().equalsIgnoreCase(bookName)) {
                     return loans.indexOf(book);
                 }
             }
