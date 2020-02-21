@@ -24,9 +24,9 @@ public class Customer extends Person implements Serializable {
         book.setAvailable(false);
     }
 
-    public void returnBookToLibrary(String itemToReturn) {
-        Book bookReturned = getLoanedBook(itemToReturn);
-        int indexBookRemove = getIndexOfBook(itemToReturn);
+    public void returnBookToLibrary(String booToReturn) {
+        Book bookReturned = getLoanedBook(booToReturn);
+        int indexBookRemove = getIndexOfBook(booToReturn);
         if (bookReturned != null) {
             loans.remove(indexBookRemove);
             System.out.println("Book returned.");
@@ -54,17 +54,18 @@ public class Customer extends Person implements Serializable {
         return 0;
     }
 
-    public void showLoanedBooks(String name) {
-        System.out.println("Loaned books by " + name + ": ");
-        getLoanedBooks();
-    }
 
-    private void getLoanedBooks() {
+
+    public void getLoanedBooks() {
         if (loans.size() > 0) {
             for (Book loan : loans) {
                 System.out.println("Book Name: " + loan.getBookName());
             }
         }
         System.out.println(" ");
+    }
+    public void showLoanedBooks(String name) {
+        System.out.println("Loaned books by " + name + ": ");
+        getLoanedBooks();
     }
 }

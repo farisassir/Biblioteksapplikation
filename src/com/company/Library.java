@@ -207,7 +207,7 @@ public class Library implements Serializable {
     private void showCustomerBooks() {
         System.out.println("Customer Name");
         String name = input.nextLine();
-        Customer customer = (Customer) user.getUserName(name);
+        Customer customer = (Customer) user.getCustomer(name);
         user.showCustomerBooks(customer);
     }
 

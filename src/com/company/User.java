@@ -148,15 +148,15 @@ public void  findCustomerByName() {
         if (userName != null) {
             userName.showLoanedBooks(userName.getName());
         } else {
-            System.out.println("Try another name");
+            System.out.println("This is not a customer.");
         }
 }
 
     void showAllCustomers() {
         System.out.println("Customer: \n");
-        for (Person borrower : users) {
-            if (borrower instanceof Customer) {
-                borrower.getInfo();
+        for (Person customer : users) {
+            if (customer instanceof Customer) {
+                customer.getInfo();
             }
         }
 
