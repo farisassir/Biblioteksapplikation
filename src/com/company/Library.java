@@ -157,8 +157,8 @@ public class Library implements Serializable {
     private void returnABook( Customer userName) {
         if (userName != null) {
             System.out.println("Book to be return:");
-            String itemToReturn = input.nextLine();
-            userName.returnBookToLibrary(itemToReturn);
+            String bookToReturn = input.nextLine();
+            userName.returnBookToLibrary(bookToReturn);
         } else {
             System.out.println("Incorrect Customer name.\n");
         }

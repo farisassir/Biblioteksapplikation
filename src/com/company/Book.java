@@ -10,7 +10,12 @@ public class Book implements Serializable {
    private String description;
    private boolean available;
 
-
+   public Book(String bookName, String author, String description, boolean available) {
+      this.bookName = bookName;
+      this.author = author;
+      this.description = description;
+      this.available = available;
+   }
 
    public String getBookName() {
       return bookName;
@@ -40,16 +45,12 @@ public class Book implements Serializable {
       return available;
    }
 
-   public void setAvailable(boolean available) {
+   public boolean setAvailable(boolean available) {
       this.available = available;
+      return available;
    }
 
-   public Book(String bookName, String author, String description, boolean available) {
-      this.bookName = bookName;
-      this.author = author;
-      this.description = description;
-      this.available = available;
-   }
+
 
    public void getInfo(){
       System.out.println(" Book name : "+getBookName() +" \n Author: "+getAuthor()+ " \n "+getDescription()+"\n "+isAvailable() +" \n");

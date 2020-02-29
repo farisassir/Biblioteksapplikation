@@ -13,22 +13,19 @@ public class Customer extends Person implements Serializable {
         super(name, userName, password);
     }
 
-    @Override
-    public void getInfo() {
-        System.out.printf("\nName: %s\nUsername: %s\n\n", getName(), getUserName());
-
-    }
 
     public void loanBookFromLibrary(Book book) {
         loans.add(book);
         book.setAvailable(false);
+
     }
 
-    public void returnBookToLibrary(String booToReturn) {
-        Book bookReturned = getLoanedBook(booToReturn);
-        int indexBookRemove = getIndexOfBook(booToReturn);
-        if (bookReturned != null) {
-            loans.remove(indexBookRemove);
+    public void returnBookToLibrary(String bookName) {
+        Book book = getLoanedBook(bookName);
+      int removeBook = getBookIndex(bookName);
+        if (book.isAvailable() == false || book != null) {
+            loans.remove(removeBook);
+            book.setAvailable(true);
             System.out.println("Book returned.");
         } else {
             System.out.println("Incorrect Book name \n");
@@ -44,7 +41,7 @@ public class Customer extends Person implements Serializable {
         return null;
     }
 
-    private int getIndexOfBook(String bookName) {
+    private int getBookIndex(String bookName) {
         if (bookName != null)
             for (Book book : loans) {
                 if (book.getBookName().equalsIgnoreCase(bookName)) {
@@ -67,5 +64,11 @@ public class Customer extends Person implements Serializable {
     public void showLoanedBooks(String name) {
         System.out.println("Loaned books by " + name + ": ");
         getLoanedBooks();
+    }
+
+    @Override
+    public void getInfo() {
+        System.out.printf("\nName: %s\nUsername: %s\n\n", getName(), getUserName());
+
     }
 }
