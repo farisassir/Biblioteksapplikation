@@ -9,12 +9,24 @@ public class Book implements Serializable {
    private String author;
    private String description;
    private boolean available;
+   private String loaner;
 
-   public Book(String bookName, String author, String description, boolean available) {
+
+
+   public Book(String bookName, String author, String description, boolean available, String loaner) {
       this.bookName = bookName;
       this.author = author;
       this.description = description;
       this.available = available;
+      this.loaner = loaner;
+   }
+
+   public String getLoaner() {
+      return loaner;
+   }
+
+   public void setLoaner(String loaner) {
+      this.loaner=loaner;
    }
 
    public String getBookName() {
@@ -53,7 +65,7 @@ public class Book implements Serializable {
 
 
    public void getInfo(){
-      System.out.println(" Book name : "+getBookName() +" \n Author: "+getAuthor()+ " \n "+getDescription()+"\n "+isAvailable() +" \n");
+      System.out.println(" Book name : "+getBookName() +" \n Author: "+getAuthor()+ " \n "+getDescription()+"\n "+isAvailable() +" \n" + "Book loaned by: "+ getLoaner() + "\n");
 
    }
 }

@@ -66,12 +66,12 @@ public class Library implements Serializable {
             System.out.println("1. Show all books");
             System.out.println("2. loan a book");
             System.out.println("3. Return a book");
-            System.out.println("4. Show All loaned book");
-            System.out.println("5. Show available books");
-            System.out.println("6. Show my loaned book");
-            System.out.println("7. Find an Author");
-            System.out.println("8. Find a Book");
-            System.out.println("9. Logout");
+           // System.out.println("4. Show All loaned book");
+            System.out.println("4. Show available books");
+            System.out.println("5. Show my loaned book");
+            System.out.println("6. Find a book with author`s name");
+            System.out.println("7. Find a Book with book name");
+            System.out.println("8. Logout");
 
 
             String option = input.nextLine();
@@ -87,21 +87,18 @@ public class Library implements Serializable {
                     returnABook(userName);
                     break;
                 case "4":
-                    bookList.showLoanedBooks();
-                    break;
-                case "5":
                     bookList.showAvailableBooks();
                     break;
-                case "6":
+                case "5":
                     user.showCustomerBooks(userName);
                     break;
-                case "7":
+                case "6":
                    findAuthor();
                     break;
-                case "8":
+                case "7":
                     findBook();
                     break;
-                case "9":
+                case "8":
                     borrowing = false;
                     break;
                 default:
@@ -149,7 +146,7 @@ public class Library implements Serializable {
             Book book = bookList.isBookAvailable(bookName);
             if (book != null) {
                 userName.loanBookFromLibrary(book);
-                System.out.printf("Your Book: %s loaned.\n", book.getBookName());
+                System.out.printf("Your Book: %s , is loaned.\n", book.getBookName());
             }
         }
     }
@@ -172,9 +169,9 @@ public class Library implements Serializable {
             System.out.println("  Administrator menu  ");
             System.out.println("1. Show all Books");
             System.out.println("2. Show all customers");
-            System.out.println("3. Show all loaned book");
-            System.out.println("4. Search Customer name");
-            System.out.println("5. Show Customer books");
+            System.out.println("3. Show all Customer´s loaned book");
+            System.out.println("4. Search Customer`s name");
+            System.out.println("5. Show Customer`s books");
             System.out.println("6. Logout");
 
             String option = input.nextLine();

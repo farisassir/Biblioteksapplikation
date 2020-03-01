@@ -17,15 +17,17 @@ public class Customer extends Person implements Serializable {
     public void loanBookFromLibrary(Book book) {
         loans.add(book);
         book.setAvailable(false);
+        book.setLoaner(getName());
 
     }
 
     public void returnBookToLibrary(String bookName) {
         Book book = getLoanedBook(bookName);
       int removeBook = getBookIndex(bookName);
-        if (book.isAvailable() == false || book != null) {
+        if (!book.isAvailable() == false || book != null) {
             loans.remove(removeBook);
             book.setAvailable(true);
+            book.setLoaner("");
             System.out.println("Book returned.");
         } else {
             System.out.println("Incorrect Book name \n");
